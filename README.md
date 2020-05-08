@@ -17,6 +17,12 @@ Installation (do on wifi with sso disconnection)
 - nvm install 12.6.0
 - nvm use 12
 - yarn install --check-files
+
+If the yarn issue persists,
+go to config/environments/development.rb
+and add this line in this file 
+config.webpacker.check_yarn_integrity = false
+
 ## ToDo
 
 - SQL setup for ActiveRecord
