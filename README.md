@@ -14,6 +14,8 @@ Installation (do on wifi with sso disconnection)
 - gem install bundler:2.1.4
 - bundle install
 - brew install yarn
+- nvm install 12.6.0
+- nvm use 12
 - yarn install --check-files
 ## ToDo
 
