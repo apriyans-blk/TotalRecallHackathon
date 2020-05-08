@@ -11,6 +11,8 @@ Things you may want to cover:
 Installation (do on wifi with sso disconnection)
 
 - rvm install "ruby-2.6.6"
+- gem install bundler:2.1.4
+- bundle install
 ## ToDo
 
 - SQL setup for ActiveRecord
