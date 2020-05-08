@@ -5,10 +5,3 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
-Video.new(
-    title: '',
-    transcript: 'This is transcript2',
-    s3url:'s3 url2',
-    folder_path: '/folder2/path'
-)
