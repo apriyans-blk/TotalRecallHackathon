@@ -8,5 +8,7 @@ class VideoSearchController < ApplicationController
   end
 
   def video_details
+    params = request.query_parameters
+    puts params #(for getting the query string on the q parameter)
   end
 end
