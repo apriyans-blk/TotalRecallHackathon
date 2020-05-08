@@ -18,11 +18,14 @@
   <div class="navbar navbar-dark bg-dark box-shadow">
     <div class="container d-flex justify-content-between">
       <a href="https://getbootstrap.com/docs/4.0/examples/album/#" class="navbar-brand d-flex align-items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
-        <strong>Album</strong>
+        <%= image_tag('1884173.png', size: "110x20", alt: "Edit Entry") %>
+<!--        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>-->
+        <strong><sub>Media Solutions</sub></strong>
       </a>
       <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <svg class="bi bi-person-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
+        </svg>
       </button>
     </div>
   </div>
@@ -32,11 +35,11 @@
 
   <section class="jumbotron text-center" style="background-color: black;">
     <div class="container">
-      <h1 class="jumbotron-heading" style="color: white;">Total Recall</h1>
-      <p class="lead text-muted">Recall anything and everything. With ease.</p>
+      <h1 class="jumbotron-heading" style="color: white;"><strong>Total Recall</strong></h1>
+      <p class="lead text-muted">Knowledge at your fingertips. Now with ease.</p>
       <p>
-        <a href="https://getbootstrap.com/docs/4.0/examples/album/#" class="btn btn-primary my-2">Main call to action</a>
-        <a href="https://getbootstrap.com/docs/4.0/examples/album/#" class="btn btn-secondary my-2">Secondary action</a>
+        <a href="https://getbootstrap.com/docs/4.0/examples/album/#" class="btn btn-primary my-2">Upload a Video</a>
+        <a href="https://getbootstrap.com/docs/4.0/examples/album/#" class="btn btn-secondary my-2">View Media Library</a>
       </p>
       <p>
       <div class="search-container" style="position: relative;">
