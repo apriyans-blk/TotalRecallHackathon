@@ -23,6 +23,11 @@ go to config/environments/development.rb
 and add this line in this file 
 config.webpacker.check_yarn_integrity = false
 
+
+After setting up, do
+rake db:migrate
+to run all migrations
+
 ## ToDo
 
 - SQL setup for ActiveRecord
