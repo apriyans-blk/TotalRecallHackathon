@@ -10,10 +10,10 @@ Things you may want to cover:
 
 ## ToDo
 
-- SQL setup for ActiveRecord pending
-- ElasticSearch config pending
-- Models pending
-- Controllers pending
-- Routes pending
-- Views pending
-- Upload functionality pending
+- SQL setup for ActiveRecord
+- ElasticSearch config
+- Models
+- Controllers (sambit)
+- Routes
+- Views
+- Upload functionality
