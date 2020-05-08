@@ -75,14 +75,12 @@ footer p {
     border: 1px solid #ffca28;
 }
 
-<<<<<<< HEAD
 .pl-0 {
     padding: 100px;
 }
 body{
     background-image: url("https://mdbootstrap.com/img/Photos/Others/background.jpg")
 }
-=======
 
 * {
     margin: 0;
@@ -211,4 +209,3 @@ body {
     opacity: 0.5;
     font-weight: bolder;
 }
->>>>>>> a50f5c61fe04e543b2a4715d64f943eeb206b873
