@@ -37,3 +37,12 @@ to run all migrations
 - Routes
 - Views
 - Upload functionality
+
+## Commands
+To migrate the data into the database
+
+`rake db:migrate`
+
+To populate the data in sqlite database run
+
+`rake db:seed`
