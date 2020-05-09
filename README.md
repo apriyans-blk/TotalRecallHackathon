@@ -23,6 +23,9 @@ go to config/environments/development.rb
 and add this line in this file 
 config.webpacker.check_yarn_integrity = false
 
+Realtime updates for frontend
+- run `bin/webpack-dev-server` in a separate terminal tab to catch changes to views and css/js etc
+
 
 After setting up, do
 rake db:migrate
