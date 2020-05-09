@@ -1,0 +1,10 @@
+<h1> Welcome to the search by keyword</h1>
+<p>You searched for: <%= @search_keyword %></p>
+
+<%= paginate @results %>
+
+<%= @results.each do |r| %>
+  <% puts r %>
+<% end %>
+
+<%= paginate @results %>

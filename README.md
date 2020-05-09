@@ -8,14 +8,13 @@ Things you may want to cover:
 * Ruby version
 2.6.6 -- via file ./.ruby-version
 
-Installation (do on wifi with sso disconnection)
+## App Installation (do on wifi with sso disconnection)
 
 - rvm install "ruby-2.6.6"
 - gem install bundler:2.1.4
 - bundle install
 - brew install yarn
-- nvm install 12.6.0
-- nvm use 12
+- nvm use erbium (this is important -- won't work with node 13 - erbium is latest on node 12)
 - yarn install --check-files
 
 If the yarn issue persists,
@@ -30,6 +29,18 @@ Realtime updates for frontend
 After setting up, do
 rake db:migrate
 to run all migrations
+
+## ElasticSearch Installation
+
+- `brew cask install homebrew/cask-versions/adoptopenjdk8`
+- `brew install elasticsearch`
+
+## ElasticSearch Seeding
+in rails console for dev environment do
+- `Video.reindex` after seeding the sqlite db
+
+## Running the App
+- `foreman start` in terminal
 
 ## ToDo
 
