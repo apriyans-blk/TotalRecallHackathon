@@ -15,6 +15,8 @@ Things you may want to cover:
 - bundle install
 - brew install yarn
 - nvm use erbium (this is important -- won't work with node 13 - erbium is latest on node 12)
+  
+  ``nvm install v12.16.3`` then ``nvm use v12.16.2``
 - yarn install --check-files
 
 If the yarn issue persists,
