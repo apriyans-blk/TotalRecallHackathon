@@ -6,12 +6,12 @@ class VideoInsertController < ApplicationController
       fileLocation = "app/assets/transcripts/transcript_" + fileCount + ".json"
       @f = File.open(fileLocation, "rb")
       @transcript = @f.read
-      title = "ted_video_" + fileCount + "/mp4"
+      title = "ted_video_" + fileCount + ".mp4"
       @object = Video.new(
           title: title,
           transcript: @transcript,
           s3url:'s3 url2',
-          folder_path: '/folder2/path'
+          folder_path: title
       )
       @object.save
       @f.close
