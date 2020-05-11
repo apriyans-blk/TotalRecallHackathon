@@ -402,7 +402,7 @@ function lightUp(node){
         if(element != undefined) {
             element.style.color = "#ff0000";
         }
-        
+
     }
 
 }
