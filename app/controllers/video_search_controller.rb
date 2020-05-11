@@ -12,6 +12,16 @@ class VideoSearchController < ApplicationController
     end
   end
 
+  def transcript
+    id = params[:vid_id]
+    video = Video.find(id);
+    transcript = video.transcript
+
+    respond_to do |format|
+      format.json { render json: transcript }
+    end
+  end
+
   # Videos details will be returned by searching the transcript
   # for the mentioned keyword using searchkick.
   # Suppy the keyword as query params.

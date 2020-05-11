@@ -5,6 +5,7 @@
   <%= javascript_pack_tag 'test' %>
 </head>
 <body>
+<div id="video-id" data-text=<%= @video.id %>></div>
 <section class="my-5" >
     <div class="container">
     <div class="row">
@@ -13,7 +14,7 @@
           <div class="container">
             <div class="embed-responsive embed-responsive-16by9">
               <div id = "video"></div>
-              <%= video_tag 'trimmedvid.mp4', controls: true, id: "video-active", class: "video-active" %>
+              <%= video_tag @video.folder_path, controls: true, id: "video-active", class: "video-active" %>
               <div id="current">0:00</div>
               <div id="duration">0:00</div>
             </div>
