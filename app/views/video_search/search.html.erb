@@ -1,11 +1,50 @@
-<h1 style="color: #005cbf"> Welcome to the search by keyword</h1>
-<p style="color: #005cbf">You searched for: <%= @search_keyword %></p>
-
+<body style="background-color: white; margin-left:20px;">
+<h1 style="color: #005cbf"> Search </h1>
 <%= paginate @results %>
 
-<%= @results.each do |r| %>
-  <p style="color: #005cbf"><%= r %> </p>
-  <% puts r %>
-<% end %>
+<div class="container bootstrap snippet">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="ibox float-e-margins">
+        <div class="ibox-content">
+          <h2>
+            <%= @results.count %> results found for: <span class="text-navy">"<%= @search_keyword %>"</span>
+          </h2>
+          <small>Request time  (0.23 seconds)</small>
+
+          <div class="search-form">
+            <form action="/video/search" method="get">
+              <div class="input-group">
+                <input id="homesearch" autofocus="autofocus" name="search_keyword" type="text" class="form-control input-lg" placeholder="Search videos.." />
+                <div class="input-group-btn">
+                  <button class="btn btn-lg btn-primary" type="submit">
+                    Search
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="hr-line-dashed"></div>
+
+
+          <% @results.each do |r| %>
+            <div class="row">
+              <div class="hr-line-dashed"></div>
+              <div class="search-result">
+                <h3><a href="/video/<%=r.id %>"><%= r.title %></a></h3>
+                <a href="#" class="search-link">totalrecall/video/<%=r.id %></a>
+                <p>
+
+                </p>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <%= paginate @results %>
+</body>
