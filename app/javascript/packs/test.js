@@ -237,6 +237,7 @@ $(document).ready(function(){
                     resolve(data) // Resolve promise and go to then()
                 },
                 error: function(err) {
+                    console.log("Error in JS Promise")
                     reject(err) // Reject the promise and go to catch()
                 }
             });

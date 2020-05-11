@@ -15,7 +15,7 @@ class VideoSearchController < ApplicationController
   def transcript
     id = params[:vid_id]
     video = Video.find(id);
-    transcript = video.transcript
+    transcript = video.full_transcript
 
     respond_to do |format|
       format.json { render json: transcript }
