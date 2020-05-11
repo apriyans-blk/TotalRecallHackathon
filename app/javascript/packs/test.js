@@ -322,6 +322,15 @@ $(document).ready(function(){
     // construct tree
     tree = new IntervalTree(clubbedIntervals);
     $('#subtitle-area').html(s)
+    const divs = document.querySelectorAll('.testclass');
+    divs.forEach(el => el.addEventListener('click', object => {
+        var time = object.target.id.split(/[start|end]/);
+        var filtered = time.filter(function (el) {
+            return el != "";
+        });
+        document.getElementById("video-active").currentTime = Math.abs(Math.floor(Number(filtered[0])))
+    }));
+
 })
 
 // gets a clubbed sentence, picks up individual intervals and assigns each of them
@@ -329,14 +338,20 @@ $(document).ready(function(){
 function club(data){
     var s = ""
     for(var i=0;i<data.length;i++){
-        s += "<div onclick=takeToTime(this); style=display:inline-block;margin-right:5px;cursor:pointer; id=start-"+data[i].start_time+"end-"+data[i].end_time+">" + data[i]["alternatives"][0].content +" </div>"
+        s += "<div class=testclass style=display:inline-block;margin-right:5px;cursor:pointer; id=start-"+data[i].start_time+"end-"+data[i].end_time+">" + data[i]["alternatives"][0].content +" </div>"
     }
 
     return s;
 }
 
 // when clicked on a word, takes to a particular time frame
-
+function takeToTime(object){
+    var time = object.id.split(/[start|end]/);
+    var filtered = time.filter(function (el) {
+        return el != "";
+    });
+    document.getElementById("video-active").currentTime = Math.abs(Math.floor(Number(filtered[0])))
+}
 // syncs with the audio playing wrt time and queries interval tree to find the
 // appropriate id of the element
 function onTrackedVideoFrame(currentTime, duration){
@@ -346,14 +361,6 @@ function onTrackedVideoFrame(currentTime, duration){
 //    lightUp(tree.queryPoint(Number(newDuration)))
     $("#current").text(newDuration); //Change #current to currentTime
     $("#duration").text(duration.toFixed(2))
-}
-
-function takeToTime(object){
-    var time = object.id.split(/[start|end]/);
-    var filtered = time.filter(function (el) {
-        return el != "";
-    });
-    document.getElementById("video-active").currentTime = Math.abs(Math.floor(Number(filtered[0])))
 }
 // changes color of an item with red
 function lightUp(node){
