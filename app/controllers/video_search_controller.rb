@@ -9,6 +9,11 @@ class VideoSearchController < ApplicationController
     unless params[:vid_id].blank?
       puts params[:vid_id]
       @video = Video.find(params[:vid_id])
+      query_params = request.query_parameters["q"]
+      unless query_params.nil?
+        @search_keyword = query_params
+      end
+
     end
   end
 
