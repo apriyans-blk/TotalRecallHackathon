@@ -17,11 +17,13 @@
 
 <body>
 <div id="video-id" data-text=<%= @video.id %>></div>
+<h1 id="video-title"  style="color: white; text-align: center " ><%= @video.title %>
+</h1>
 <section class="my-5" >
     <div class="container">
     <div class="row">
       <div class="col-md-8 mx-auto">
-        <div class="card mb-3 box-shadow">
+        <div class=" mb-3 ">
           <div class="container">
             <div class="embed-responsive embed-responsive-16by9">
               <div id = "video"></div>
@@ -38,9 +40,9 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8 mx-auto">
-        <div class="card mb-4 box-shadow">
+        <div class=" mb-3 ">
         </div>
-        <div id="subtitle-area" style="border-style: dotted; padding: 20 20 20 20; margin-top: 20px;">
+        <div id="subtitle-area" style="text-align:center;">
 <!--          <p><%#= @video.transcript %></p>-->
         </div>
       </div>
