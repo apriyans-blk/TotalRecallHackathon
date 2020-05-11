@@ -209,3 +209,7 @@ body {
     opacity: 0.5;
     font-weight: bolder;
 }
+
+#subtitle-area{
+    color: white;
+}

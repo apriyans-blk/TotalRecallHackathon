@@ -7,8 +7,8 @@ class VideoSearchController < ApplicationController
   # Get the details of video for requested id.
   def video_details
     unless params[:vid_id].blank?
-      @video = Video.find_by_id(params[:vid_id])
-      puts @video.s3url
+      puts params[:vid_id]
+      @video = Video.find(params[:vid_id])
     end
   end
 

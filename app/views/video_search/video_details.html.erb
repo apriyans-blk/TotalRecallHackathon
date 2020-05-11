@@ -1,6 +1,9 @@
 <html>
 <head>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
   <!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.css" rel="stylesheet" type="text/css" />-->
+  <%= javascript_pack_tag 'intervaltree' %>
+  <%= javascript_pack_tag 'test' %>
 </head>
 <body>
 <section class="my-5" >
@@ -10,7 +13,10 @@
         <div class="card mb-3 box-shadow">
           <div class="container">
             <div class="embed-responsive embed-responsive-16by9">
-              <iframe class="embed-responsive-item" src="<%= @video.s3url %>" allowfullscreen></iframe>
+              <div id = "video"></div>
+              <%= video_tag 'trimmedvid.mp4', controls: true, id: "video-active", class: "video-active" %>
+              <div id="current">0:00</div>
+              <div id="duration">0:00</div>
             </div>
           </div>
         </div>
@@ -22,7 +28,9 @@
     <div class="row">
       <div class="col-md-8 mx-auto">
         <div class="card mb-4 box-shadow">
-          <p><%= @video.transcript %></p>
+        </div>
+        <div id="subtitle-area" style="border-style: dotted; padding: 20 20 20 20; margin-top: 20px;">
+<!--          <p><%#= @video.transcript %></p>-->
         </div>
       </div>
     </div>
