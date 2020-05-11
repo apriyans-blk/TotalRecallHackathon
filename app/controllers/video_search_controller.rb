@@ -23,7 +23,7 @@ class VideoSearchController < ApplicationController
     @page = params[:page] if params[:page]
 
     unless @search_keyword.blank?
-      @results = Video.search @search_keyword, per_page: 12, page: @page, fields: ["title^10", "transcript", "folder_path"]
+      @results = Video.search @search_keyword, load: false, per_page: 12, page: @page, fields: ["title^10","transcript"]
     end
   end
 end

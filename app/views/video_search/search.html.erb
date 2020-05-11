@@ -1,9 +1,10 @@
-<h1> Welcome to the search by keyword</h1>
-<p>You searched for: <%= @search_keyword %></p>
+<h1 style="color: #005cbf"> Welcome to the search by keyword</h1>
+<p style="color: #005cbf">You searched for: <%= @search_keyword %></p>
 
 <%= paginate @results %>
 
 <%= @results.each do |r| %>
+  <p style="color: #005cbf"><%= r %> </p>
   <% puts r %>
 <% end %>
 
