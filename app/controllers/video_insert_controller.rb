@@ -3,7 +3,7 @@ require 'json'
 class VideoInsertController < ApplicationController
   def insert
     @count = 1
-    while @count < 4
+    while @count < 6
       fileCount  = @count.to_s
       fileLocation = "app/assets/transcripts/transcript_" + fileCount + ".json"
       file = File.open(fileLocation, "rb")
