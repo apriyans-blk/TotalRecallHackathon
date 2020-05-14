@@ -349,17 +349,35 @@ $(document).ready(function(){
         }));
 
 
-        var search_query = $("#search-query").data("text").toLowerCase()
+        var search_query = $("#search-query").data("text").toLowerCase().split(" ")
+        var regex = /[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g;
+
         if(search_query.length > 0){
             var classitems = $('.testclass')
             var count = 0;
             for (var i = 0; i < classitems.length; i++) {
                 var lowercase = classitems[i].innerHTML.toLowerCase()
-                if(lowercase.indexOf(search_query) != -1){
-                    count++;
-                   id = classitems[i].id
-                    x = document.getElementById(id).style.color= "#ff0000";
+                if(lowercase.indexOf(search_query[0]) != -1) {
+                    var flag = true;
+                    var idx = 0;
+                    for (var j = i; j < i + search_query.length; j++) {
+                        var sanitized_item = classitems[j].innerText.toLowerCase().replace(regex, '');
+                        if (search_query[idx] != sanitized_item) {
+                            flag = false;
+                            break;
+                        } else {
+                            idx++;
+                        }
+                    }
+                    if (flag) {
+                        for (var j = i; j < i + search_query.length; j++) {
+                            id = classitems[j].id
+                            console.log(classitems[j])
+                            x = document.getElementById(id).style.color = "#ff0000";
+                        }
+                    }
                 }
+
             }
 
             $('#search-query').html(count)
