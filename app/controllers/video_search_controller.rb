@@ -27,6 +27,9 @@ class VideoSearchController < ApplicationController
     end
   end
 
+  def azure
+
+  end
   # Videos details will be returned by searching the transcript
   # for the mentioned keyword using searchkick.
   # Suppy the keyword as query params.
