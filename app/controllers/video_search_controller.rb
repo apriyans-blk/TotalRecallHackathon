@@ -28,7 +28,9 @@ class VideoSearchController < ApplicationController
   end
 
   def azure
+  end
 
+  def corona
   end
   # Videos details will be returned by searching the transcript
   # for the mentioned keyword using searchkick.

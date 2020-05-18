@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   get '/video/:vid_id', to: 'video_search#video_details'
   get '/video/transcript/:vid_id', to: 'video_search#transcript'
   get '/azure', to: 'video_search#azure'
+  get '/corona', to: 'video_search#corona'
 end
