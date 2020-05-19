@@ -1,7 +1,7 @@
 class VideoSearchController < ApplicationController
   def home
     # last 25 videos for home page
-    @videos  = Video.last(25).reverse
+    @videos  = Video.last(25)
   end
 
   # Get the details of video for requested id.
