@@ -2,9 +2,9 @@ require 'json'
 
 class VideoInsertController < ApplicationController
   def insert
-    @titles = ["Davos 2020: Larry Fink","Larry Fink: Preparing for a crisis","Neeraj Seth - Bloomberg"]
+    @titles = ["Davos 2020: Larry Fink","Larry Fink: Preparing for a crisis","Neeraj Seth - Bloomberg","BlackRock Bottom Line: Sustainable investing: Resilience amid uncertainty"]
     @count = 1
-    while @count < 4
+    while @count < 5
       fileCount  = @count.to_s
       fileLocation = "app/assets/transcripts/transcript_" + fileCount + ".json"
       file = File.open(fileLocation, "rb")
